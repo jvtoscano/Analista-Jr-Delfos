@@ -99,7 +99,7 @@ for coluna in corrente_CC.columns:
         y=corrente_CC[coluna],
         name=coluna,             
         line_shape='linear',
-        hovertemplate="<b>%{x}</b><br>Corrente CC (A): %{y} A<br>Coluna: " + coluna + "<extra></extra>"
+        hovertemplate="<b>%{x}</b><br>Corrente CC normalizada: %{y} %<br>Coluna: " + coluna + "<extra></extra>"
     ))
 
 fig.update_traces(hoverinfo='text+name', mode='lines')
@@ -156,4 +156,5 @@ st.markdown(
         unsafe_allow_html=True,
 
     )  
+
 
