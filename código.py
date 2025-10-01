@@ -61,7 +61,7 @@ for coluna in temperatura.columns:
         y=temperatura[coluna],
         name=coluna,             
         line_shape='linear',
-        hovertemplate="<b>%{x}</b><br>Temperatura (°C): %{y} kW<br>Coluna: " + coluna + "<extra></extra>"
+        hovertemplate="<b>%{x}</b><br>Temperatura (°C): %{y} °C<br>Coluna: " + coluna + "<extra></extra>"
     ))
 
 fig.update_traces(hoverinfo='text+name', mode='lines')
@@ -80,7 +80,7 @@ for coluna in tensao.columns:
         y=tensao[coluna],
         name=coluna,             
         line_shape='linear',
-        hovertemplate="<b>%{x}</b><br>Tensão (V): %{y} kW<br>Coluna: " + coluna + "<extra></extra>"
+        hovertemplate="<b>%{x}</b><br>Tensão (V): %{y} V<br>Coluna: " + coluna + "<extra></extra>"
     ))
 
 fig.update_traces(hoverinfo='text+name', mode='lines')
@@ -99,7 +99,7 @@ for coluna in corrente_CC.columns:
         y=corrente_CC[coluna],
         name=coluna,             
         line_shape='linear',
-        hovertemplate="<b>%{x}</b><br>Corrente CC (A): %{y} kW<br>Coluna: " + coluna + "<extra></extra>"
+        hovertemplate="<b>%{x}</b><br>Corrente CC (A): %{y} A<br>Coluna: " + coluna + "<extra></extra>"
     ))
 
 fig.update_traces(hoverinfo='text+name', mode='lines')
@@ -127,7 +127,7 @@ for coluna in tracker.columns:
         y=tracker[coluna],
         name=coluna,             
         line_shape='linear',
-        hovertemplate="<b>%{x}</b><br>Inclinação (°): %{y} kW<br>Coluna: " + coluna + "<extra></extra>"
+        hovertemplate="<b>%{x}</b><br>Inclinação (°): %{y} °<br>Coluna: " + coluna + "<extra></extra>"
     ))
 
 fig.update_traces(hoverinfo='text+name', mode='lines')
@@ -156,3 +156,4 @@ st.markdown(
         unsafe_allow_html=True,
 
     )  
+
