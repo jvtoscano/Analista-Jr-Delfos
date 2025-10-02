@@ -154,6 +154,8 @@ st.write('**[PT]**')
 st.write('Trackers inoperantes:')
 st.write('**[EN]**')
 st.write('inoperative trackers:')
+st.write('')
+
 for item in lista_trackers:
     st.write(f"- {item}")
 
@@ -175,6 +177,7 @@ st.markdown(
         unsafe_allow_html=True,
 
     )  
+
 
 
 
