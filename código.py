@@ -27,9 +27,10 @@ base2 = carregar_base2()
 base3 = carregar_base3()
 
 
-############# MENUS ############################################################################################################################
+############# Layout ############################################################################################################################
 
-st.title("Relatório de Performance 01/Jan e 02/Jan")
+st.title("Relatório de Performance Usina Solar 2")
+st.title("Performance Report Solar Plant 2")
 
 ############## POTENCIA ##############################################################################################################################
 potencia = base.loc[:, [coluna for coluna in base.columns if 'PowerActive' in coluna]]
@@ -48,9 +49,13 @@ fig.update_traces(hoverinfo='text+name', mode='lines')
 st.plotly_chart(fig)
 
 st.write('')
+st.write('[PT]')
 st.write('INV02 apresentou queda de 50% na performance nos dois dias')
 st.write('INV05 apresentou queda de performance em comparação aos demais inversores')
 
+st.write('[EN]')
+st.write('Inverter 'INV02' shows a power limitation about 50% for the period')
+st.write('Inver 'INV05' shows a drop on its performance during periods of low-medium irradiance')
 ########### TEMPERATURA ##############################################################################################################################
 temperatura = base.loc[:, [coluna for coluna in base.columns if 'Temperature' in coluna]]
 temperatura = temperatura.drop(temperatura.index[-1])
@@ -156,5 +161,6 @@ st.markdown(
         unsafe_allow_html=True,
 
     )  
+
 
 
