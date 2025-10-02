@@ -73,9 +73,9 @@ fig.update_traces(hoverinfo='text+name', mode='lines')
 # fig.show()
 st.plotly_chart(fig)
 st.write('**[PT]**')
-st.write('INV07 apresentou temperatura maior em todo o período de análise, mesmo quando não havia produção. Recomenda-se analisar a calibração do sensor')
+st.write('INV07 apresentou temperatura maior em todo o período de análise, mesmo quando não havia produção. Não descartar hipótese de problema no sensor de temperatura')
 st.write('**[EN]**')
-st.write('INV07 showed a higher temperature throughout the entire analysis period, even when there was no production. It is recommended to check the sensor calibration')
+st.write('INV07 showed a higher temperature throughout the entire analysis period, even when there was no production. Possible temperature sensor issue, requires investigation')
 
 ########### TENSÃO ###################################################################################################################################
 tensao = base.loc[:, [coluna for coluna in base.columns if 'Voltage' in coluna]]
@@ -174,6 +174,7 @@ st.markdown(
         unsafe_allow_html=True,
 
     )  
+
 
 
 
