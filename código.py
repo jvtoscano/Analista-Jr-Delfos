@@ -98,17 +98,17 @@ st.write('Tensões sem anomalias. as quedas pontuais observáveis não indicam r
 st.write('**[EN]**')
 st.write('Voltages show no anomalies. The occasional drops observed do not indicate any risks')
 
-######### CORRENTE CC #################################################################################################################################
-corrente_CC = base2.loc[:, [coluna for coluna in base2.columns]]
-corrente_CC = corrente_CC.drop(corrente_CC.index[-1])
+######### Potencia CC #################################################################################################################################
+potencia_CC = base2.loc[:, [coluna for coluna in base2.columns]]
+potencia_CC = potencia_CC.drop(potencia_CC.index[-1])
 fig = go.Figure()
-for coluna in corrente_CC.columns:
+for coluna in potencia_CC.columns:
     fig.add_trace(go.Scatter(
-        x=corrente_CC.index,
-        y=corrente_CC[coluna],
+        x=potencia_CC.index,
+        y=potencia_CC[coluna],
         name=coluna,             
         line_shape='linear',
-        hovertemplate="<b>%{x}</b><br>Corrente CC normalizada: %{y} %<br>Coluna: " + coluna + "<extra></extra>"
+        hovertemplate="<b>%{x}</b><br>Potência CC normalizada: %{y} %<br>Coluna: " + coluna + "<extra></extra>"
     ))
 
 fig.update_traces(hoverinfo='text+name', mode='lines')
@@ -181,6 +181,7 @@ st.markdown(
         unsafe_allow_html=True,
 
     )  
+
 
 
 
