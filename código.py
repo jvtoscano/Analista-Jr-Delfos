@@ -50,12 +50,12 @@ st.plotly_chart(fig)
 
 st.write('')
 st.write('**[PT]**')
-st.write('INV02 apresentou queda de 50% na performance nos dois dias')
-st.write('INV05 apresentou queda de performance durante perídos de baixa-média irradiância')
+st.write('INV02 apresentou queda de 50% na performance nos dois dias.')
+st.write('INV05 apresentou queda de performance durante perídos de baixa-média irradiância.')
 
 st.write('**[EN]**')
-st.write('Inverter INV02 showed a 50% performance drop on both days')
-st.write('Inverter INV05 showed a performance drop during periods of low to medium irradiance')
+st.write('Inverter INV02 showed a 50% performance drop on both days.')
+st.write('Inverter INV05 showed a performance drop during periods of low to medium irradiance.')
 ########### TEMPERATURA ##############################################################################################################################
 temperatura = base.loc[:, [coluna for coluna in base.columns if 'Temperature' in coluna]]
 temperatura = temperatura.drop(temperatura.index[-1])
@@ -72,8 +72,10 @@ for coluna in temperatura.columns:
 fig.update_traces(hoverinfo='text+name', mode='lines')
 # fig.show()
 st.plotly_chart(fig)
-
+st.write('**[PT]**')
 st.write('INV07 apresentou temperatura maior em todo o período de análise, mesmo quando não havia produção. Recomenda-se analisar a calibração do sensor')
+st.write('**[EN]**')
+st.write('INV07 showed a higher temperature throughout the entire analysis period, even when there was no production. It is recommended to check the sensor calibration')
 
 ########### TENSÃO ###################################################################################################################################
 tensao = base.loc[:, [coluna for coluna in base.columns if 'Voltage' in coluna]]
@@ -172,6 +174,7 @@ st.markdown(
         unsafe_allow_html=True,
 
     )  
+
 
 
 
