@@ -51,7 +51,7 @@ st.plotly_chart(fig)
 st.write('')
 st.write('[PT]')
 st.write('INV02 apresentou queda de 50% na performance nos dois dias')
-st.write('INV05 apresentou queda de performance em comparação aos demais inversores')
+st.write('INV05 apresentou queda de performance durante perídos de baixa-média irradiância')
 
 st.write('[EN]')
 st.write('Inverter INV02 shows a power limitation about 50% for the period')
@@ -161,6 +161,7 @@ st.markdown(
         unsafe_allow_html=True,
 
     )  
+
 
 
 
