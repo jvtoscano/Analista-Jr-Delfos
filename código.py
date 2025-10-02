@@ -121,7 +121,11 @@ lista = ['INV08 - MPPT2_STR01',
         'INV05 - MPPT3_STR01',
         'INV05 - MPPT3_STR02',
         'INV05 - MPPT4_STR01',
-        'INV05 - MPPT4_STR02', 
+        'INV05 - MPPT4_STR02',
+        'INV02 - MPPT2_STR01',
+        'INV02 - MPPT2_STR02',
+        'INV02 - MPPT3_STR01',
+        'INV02 - MPPT3_STR02',
         'INV02 - MPPT5_STR01',
         'INV02 - MPPT5_STR02']
 
@@ -177,6 +181,7 @@ st.markdown(
         unsafe_allow_html=True,
 
     )  
+
 
 
 
