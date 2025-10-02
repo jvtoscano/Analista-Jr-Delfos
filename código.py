@@ -49,7 +49,7 @@ fig.update_traces(hoverinfo='text+name', mode='lines')
 st.plotly_chart(fig)
 
 st.write('')
-st.write(f'<b>[PT]</b>')
+st.write('**[PT]**')
 st.write('INV02 apresentou queda de 50% na performance nos dois dias')
 st.write('INV05 apresentou queda de performance durante perídos de baixa-média irradiância')
 
@@ -172,6 +172,7 @@ st.markdown(
         unsafe_allow_html=True,
 
     )  
+
 
 
 
