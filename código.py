@@ -53,7 +53,7 @@ st.write('**[PT]**')
 st.write('INV02 apresentou queda de 50% na performance nos dois dias')
 st.write('INV05 apresentou queda de performance durante perídos de baixa-média irradiância')
 
-st.write('[EN]')
+st.write('**[EN]**')
 st.write('Inverter INV02 showed a 50% performance drop on both days')
 st.write('Inverter INV05 showed a performance drop during periods of low to medium irradiance')
 ########### TEMPERATURA ##############################################################################################################################
@@ -91,9 +91,9 @@ for coluna in tensao.columns:
 fig.update_traces(hoverinfo='text+name', mode='lines')
 # fig.show()
 st.plotly_chart(fig)
-st.write('[PT]')
+st.write('**[PT]**')
 st.write('Tensões sem anomalias. as quedas pontuais observáveis não indicam riscos')
-st.write('[EN]')
+st.write('**[EN]**')
 st.write('Voltages show no anomalies. The occasional drops observed do not indicate any risks')
 
 ######### CORRENTE CC #################################################################################################################################
@@ -122,9 +122,9 @@ lista = ['INV08 - MPPT2_STR01',
         'INV05 - MPPT4_STR02', 
         'INV02 - MPPT5_STR01',
         'INV02 - MPPT5_STR02']
-st.write('[PT]')
+st.write('**[PT]**')
 st.write('Strings com baixa performance nos dois dias (inversor 02 tem strings desligadas):')
-st.write('[EN]')
+st.write('**[EN]**')
 st.write('Strings with low performance on both days (Inverter 02 has disconnected strings):')
 
 for item in lista:
@@ -147,9 +147,9 @@ fig.update_traces(hoverinfo='text+name', mode='lines')
 # fig.show()
 st.plotly_chart(fig)
 lista_trackers = ['TK_04-03','TK_05-03']
-st.write('[PT]')
+st.write('**[PT]**')
 st.write('Trackers inoperantes:')
-st.write('[EN]')
+st.write('**[EN]**')
 st.write('inoperative trackers:')
 for item in lista_trackers:
     st.write(f"- {item}")
@@ -172,6 +172,7 @@ st.markdown(
         unsafe_allow_html=True,
 
     )  
+
 
 
 
