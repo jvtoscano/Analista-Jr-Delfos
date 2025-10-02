@@ -125,13 +125,11 @@ lista = ['INV08 - MPPT2_STR01',
         'INV02 - MPPT5_STR01',
         'INV02 - MPPT5_STR02']
 
-st.table(lista.style.hide(axis='index'))
-
 st.write('**[PT]**')
 st.write('Strings com baixa performance nos dois dias (inversor 02 tem strings desligadas):')
 st.write('**[EN]**')
 st.write('Strings with low performance on both days (Inverter 02 has disconnected strings):')
-
+st.write('')
 for item in lista:
     st.write(f"- {item}")
 
@@ -177,6 +175,7 @@ st.markdown(
         unsafe_allow_html=True,
 
     )  
+
 
 
 
